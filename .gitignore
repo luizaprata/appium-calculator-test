@@ -1,0 +1,12 @@
+# VSCode
+.vscode/
+
+# Mac
+.DS_Store
+
+# npm
+node_modules
+
+# Python
+__pycache__
+*.pyc
