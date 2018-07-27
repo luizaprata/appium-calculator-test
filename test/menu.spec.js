@@ -38,7 +38,8 @@ describe('android simple', function() {
   })
 
   it('should find an element', function() {
-    return driver.elementsByClassName('android.widget.TextView').should.exists
+    return driver.elementsByClassName('android.widget.TextView')
+    .should.exist
     //els[2].text().should.become("This is a new note!")
   })
 })
