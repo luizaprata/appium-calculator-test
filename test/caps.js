@@ -43,3 +43,12 @@ exports.selendroid16 = {
   deviceName: 'Android Emulator',
   app: undefined, // will be set later
 }
+
+exports.android18 = {
+  browserName: '',
+  'appium-version': '1.6',
+  platformName: 'Android',
+  platformVersion: '6.0',
+  deviceName: 'Android Emulator',
+  app: undefined, // will be set later
+}

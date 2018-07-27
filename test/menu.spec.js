@@ -14,7 +14,7 @@ describe('android simple', function() {
       ? serverConfigs.sauce
       : serverConfigs.local
     driver = wd.promiseChainRemote(serverConfig)
-    require('./logging').configure(driver)
+    require('./log').configure(driver)
 
     var desired = require('./caps').android18
     desired.app = require('./apps').androidApp
@@ -38,13 +38,7 @@ describe('android simple', function() {
   })
 
   it('should find an element', function() {
-    return driver
-      .elementsByClassName('android.widget.TextView')
-      .then(function(els) {
-        els.map(function(el) {
-          el.text().should.become('This is a new note!')
-        })
-        //els[2].text().should.become("This is a new note!")
-      })
+    return driver.elementsByClassName('android.widget.TextView').should.exists
+    //els[2].text().should.become("This is a new note!")
   })
 })
